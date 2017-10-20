@@ -1,0 +1,38 @@
+<table class="table">
+    <thead>
+        <tr>
+            <th>序号</th>
+            <th>用户名</th>
+            <th>内容</th>
+            <th>评论数</th>
+            <th>点赞数</th>
+            <th>是否点赞数</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th>1</th>
+            <td>
+                <a href="https://en.wikipedia.org/wiki/Leicester_City_F.C." title="Leicester City F.C.">Leicester City</a>
+                <strong>(C)</strong>
+            </td>
+            <td>38</td>
+            <td>23</td>
+            <td>12</td>
+            <td>3</td>
+            <td>68</td>
+            <td>36</td>
+            <td>+32</td>
+            <td>81</td>
+            <td>Qualification for the
+                <a href="https://en.wikipedia.org/wiki/2016%E2%80%9317_UEFA_Champions_League#Group_stage" title="2016–17 UEFA Champions League">Champions League group stage</a>
+            </td>
+        </tr>
+        {{#each model as |feed|}}
+        <tr>
+            <td>{{feed.feed_id}}</td>
+            <td>{{feed.content}}</td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
