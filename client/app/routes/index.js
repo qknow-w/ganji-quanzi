@@ -1,4 +1,5 @@
 import Route from '@ember/routing/route';
+import Ember from 'ember';
 // import * as request from 'request'
 
 const headers = {
@@ -34,14 +35,20 @@ const headers = {
 }
 
 export default Route.extend({
+  ajax: Ember.inject.service(),
   model() {
-    let getVideolistUrl = 'https://app.ganji.com/api/v1/msc/v1/jn/feed/list?scene=videoplaza&user_id=163409644&longitude=104.041967&latitude=30.585384&location=45&city_id=45&optype=0&filter=video'
+    let getVideolistUrl = '/api/v1/msc/v1/jn/feed/list?scene=videoplaza&user_id=163409644&longitude=104.041967&latitude=30.585384&location=45&city_id=45&optype=0&filter=video'
 
-    return this.get('ajax').request({
-      url: getVideolistUrl,
-      headers: headers,
-      gzip: true
-    })
+    return $.get({
+          url: getVideolistUrl,
+          headers: headers,
+          gzip: true
+        })
+    // return this.get('ajax').request({
+    //   url: getVideolistUrl,
+    //   headers: headers,
+    //   gzip: true
+    // })
     // request.get({
     //     url: getVideolistUrl,
     //     headers: headers,

@@ -12,7 +12,7 @@
   "repository": "",
   "scripts": {
     "build": "ember build",
-    "start": "ember server",
+    "start": "ember server --proxy https://app.ganji.com",
     "test": "ember test"
   },
   "devDependencies": {
