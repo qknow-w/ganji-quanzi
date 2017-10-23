@@ -1,0 +1,28 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon  ./src/app.ts --exec ts-node  --no-cache  --ignore=./config",
+    "build": "tsc"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "config": "^1.27.0",
+    "cors": "^2.8.4",
+    "express": "^4.16.2",
+    "log4js": "^2.3.7",
+    "method-override": "^2.3.10",
+    "request": "^2.83.0",
+    "typescript": "^2.5.3"
+  },
+  "devDependencies": {
+    "@types/body-parser": "^1.16.5",
+    "@types/cors": "^2.8.1",
+    "@types/log4js": "^2.3.5",
+    "@types/method-override": "^0.0.30",
+    "@types/request": "^2.0.6",
+    "@types/winston": "^2.3.6"
+  }
+}
